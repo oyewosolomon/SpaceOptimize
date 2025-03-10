@@ -167,14 +167,7 @@ const Navbar: React.FC = () => {
             >
               Pricing
             </a>
-            <a 
-              href="#" 
-              className={`px-4 py-2 rounded-lg transition-colors ${
-                isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
-              }`}
-            >
-              Case Studies
-            </a>
+           
             <a 
               href="#" 
               className={`px-4 py-2 rounded-lg transition-colors ${

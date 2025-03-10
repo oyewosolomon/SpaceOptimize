@@ -24,42 +24,41 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative container mx-auto px-4 py-20">
-        <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Optimize Your Workspace for the Future
-          </h1>
-          <p className="text-xl text-gray-300 mb-12">
-            Transform your office space utilization with AI-powered analytics. 
-            Reduce costs by 30% while maximizing productivity.
-          </p>
+      <div className="relative flex items-center justify-center min-h-screen">
+        <div className="container mx-auto px-4 py-20">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            {/* Left Column - Text Content */}
+            <div className={`flex-1 text-center md:text-left transition-all duration-1000 bg-white p-5 rounded-xl text-gray-800 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
+                Optimize Your Workspace for the Future
+              </h1>
+              <p className="text-xl text-gray-500 mb-12">
+                Transform your office space utilization with AI-powered analytics. 
+                Reduce costs by 30% while maximizing productivity.
+              </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <button className="px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-semibold flex items-center justify-center group transition-all">
-              Get Started
-              <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-lg font-semibold backdrop-blur-sm transition-all">
-              Watch Demo
-            </button>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div 
-                key={index}
-                className={`p-6 rounded-xl bg-white/5 backdrop-blur-sm transform transition-all duration-500 hover:scale-105 ${
-                  isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                <stat.icon className="w-8 h-8 text-blue-400 mx-auto mb-4" />
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-400">{stat.label}</div>
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-16">
+                <button className="px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-semibold flex items-center justify-center group transition-all">
+                  Get Started
+                  <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </button>
+                <button className="px-8 py-4 bg-black/10 hover:bg-black/80 hover:text-white text-gray-700 rounded-lg font-semibold backdrop-blur-sm transition-all">
+                  Watch Demo
+                </button>
               </div>
-            ))}
+            </div>
+
+            {/* Right Column - Image */}
+            <div className="flex-1 flex justify-center md:justify-end">
+              <div className="w-full max-w-md lg:max-w-lg xl:max-w-xl">
+                <img
+                  src="/images/space-1.webp" // Replace with your image URL
+                  alt="Workspace Optimization"
+                  className="rounded-lg shadow-2xl"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

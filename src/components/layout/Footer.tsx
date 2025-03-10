@@ -50,11 +50,12 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="mb-6">
-              <img 
+              {/* <img 
                 src="/api/placeholder/120/40" 
                 alt="SpaceOptimize Logo" 
                 className="h-8"
-              />
+              /> */}
+              <span className='font-extrabold'>SpaceOptimize</span>
             </div>
             <p className="text-gray-400 mb-6">
               Transforming workplace efficiency through intelligent space optimization solutions.
@@ -94,11 +95,7 @@ const Footer = () => {
                   Pricing
                 </a>
               </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Case Studies
-                </a>
-              </li>
+            
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
                   Integrations

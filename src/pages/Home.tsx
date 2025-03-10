@@ -56,7 +56,6 @@ export default function Home() {
     <main>
       <Hero/>
       <Features/>
-      <CaseStudies/>
       <Integrations/>
       <Testimonials/>
       <Contact/>
