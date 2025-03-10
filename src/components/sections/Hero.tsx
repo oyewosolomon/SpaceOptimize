@@ -3,10 +3,35 @@ import { ChevronRight, Building2, Users, BarChart3, DollarSign } from 'lucide-re
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0); // Track current image index
+  const [imageOpacity, setImageOpacity] = useState(1); // Control image opacity
+
+  // List of images to cycle through
+  const images = [
+    '/images/space-1.webp',
+    '/images/space-2.jfif'
+  ];
 
   useEffect(() => {
+    // Fade in the text content
     setIsVisible(true);
-  }, []);
+
+    // Function to handle the fade-in and fade-out effect
+    const fadeInOut = () => {
+      setImageOpacity(0); // Fade out
+      setTimeout(() => {
+        // Change to the next image after fade-out
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setImageOpacity(1); // Fade in
+      }, 1000); // Wait for 1 second (fade-out duration)
+    };
+
+    // Start the fade-in/out cycle
+    const interval = setInterval(fadeInOut, 5000); // Change image every 5 seconds
+
+    // Cleanup interval on unmount
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   const stats = [
     { icon: Building2, value: '20M+', label: 'Sq Ft Managed' },
@@ -53,9 +78,10 @@ const Hero = () => {
             <div className="flex-1 flex justify-center md:justify-end">
               <div className="w-full max-w-md lg:max-w-lg xl:max-w-xl">
                 <img
-                  src="/images/space-1.webp" // Replace with your image URL
+                  src={images[currentImageIndex]} // Dynamically change image source
                   alt="Workspace Optimization"
-                  className="rounded-lg shadow-2xl"
+                  className="rounded-lg shadow-2xl transition-opacity duration-1000"
+                  style={{ opacity: imageOpacity }} // Apply dynamic opacity
                 />
               </div>
             </div>
