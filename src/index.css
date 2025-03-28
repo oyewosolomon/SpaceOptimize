@@ -24,6 +24,8 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222 89% 51%;
     --radius: 0.75rem;
+    --font-dm-sans: 'DM Sans', sans-serif;
+    --font-sans: 'ui-sans-serif', sans-serif;
   }
 
   .dark {
@@ -46,10 +48,35 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
+    --font-dm-sans: 'DM Sans', sans-serif;
+    --font-sans: 'ui-sans-serif', sans-serif;
   }
 
   * {
     @apply border-border;
+  }
+
+   /* Apply DM Sans to all text */
+   body {
+    font-family: var(--font-dm-sans), var(--font-sans);
+    @apply font-normal;
+    letter-spacing: 0.0125em;
+  }
+
+  /* Heading weights */
+  h1, h2, h3 {
+    font-family: var(--font-dm-sans), var(--font-sans);
+    @apply font-bold; /* DM Sans looks best at 700 for headings */
+  }
+
+  /* Italics */
+  em, i {
+    font-style: italic;
+  }
+
+  /* Utility class for system font */
+  .font-system {
+    font-family: var(--font-sans);
   }
   body {
     @apply bg-background text-foreground;

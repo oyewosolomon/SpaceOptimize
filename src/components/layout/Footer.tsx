@@ -16,7 +16,10 @@ const Footer = () => {
       {/* Newsletter Section */}
       <div className="border-b border-gray-800">
         <div className="container mx-auto px-4 py-12">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto flex justify-between">
+          <div>
+            <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M2 18V7C2 5.34315 3.34315 4 5 4H19C20.6569 4 22 5.34315 22 7V18C22 19.6569 20.6569 21 19 21H5C3.34315 21 2 19.6569 2 18Z" stroke='#ffffff' stroke-width="1.7" stroke-linecap="round"></path> <path d="M7 8L7 17" stroke="#DF1463" stroke-width="1.7" stroke-linecap="round"></path> </g></svg>
+            </div>
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
                 <h3 className="text-2xl font-bold mb-2">
@@ -108,16 +111,8 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Resources</h4>
             <ul className="space-y-4">
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  API Reference
-                </a>
-              </li>
+             
+             
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
                   Blog
@@ -144,13 +139,7 @@ const Footer = () => {
                 <Mail className="w-5 h-5" />
                 contact@spaceoptimize.com
               </li>
-              <li>
-                <p className="text-gray-400">
-                  123 Innovation Drive<br />
-                  San Francisco, CA 94105<br />
-                  United States
-                </p>
-              </li>
+             
             </ul>
           </div>
         </div>

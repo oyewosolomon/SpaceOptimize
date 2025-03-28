@@ -78,14 +78,10 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex-shrink-0 ">
-            {/* <img 
-              src="/api/placeholder/120/40" 
-              alt="SpaceOptimize Logo" 
-              className="h-8"
-            /> */}
+          <div className="flex-shrink-0 flex items-center gap-3">
+          <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M2 18V7C2 5.34315 3.34315 4 5 4H19C20.6569 4 22 5.34315 22 7V18C22 19.6569 20.6569 21 19 21H5C3.34315 21 2 19.6569 2 18Z" stroke={`${isScrolled?'#000000':'#ffffff'}`} stroke-width="1.7" stroke-linecap="round"></path> <path d="M7 8L7 17" stroke="#DF1463" stroke-width="1.7" stroke-linecap="round"></path> </g></svg>
             <a href="/" className={`mr-8 flex items-center ${isScrolled ?'text-gray-600':'text-white'} space-x-2`}>
-          <span className="font-bold text-2xl">SpaceOptimize</span>
+          <span className={`font-bold text-2xl ${isScrolled?'hidden':'flex'}`}>SpaceOptimize</span>
         </a>
             
           </div>

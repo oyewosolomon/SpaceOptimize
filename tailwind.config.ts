@@ -5,6 +5,14 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['DM Sans', 'sans-serif'],
+      },
+      fontWeight: {
+        normal: '400',
+        medium: '500',
+        bold: '700',
+      },
       animation: {
         'fade-in': 'fadeIn 1s ease-in-out',
         'fade-in-up': 'fadeInUp 1s ease-in-out',

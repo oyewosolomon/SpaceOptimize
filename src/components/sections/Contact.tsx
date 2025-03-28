@@ -208,27 +208,10 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Email</h4>
-                      <p className="text-gray-600">contact@spaceoptimize.com</p>
+                      <p className="text-gray-600">hello@spaceoptimize.com</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-blue-50 rounded-lg">
-                      <Phone className="w-6 h-6 text-blue-500" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Phone</h4>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-blue-50 rounded-lg">
-                      <MapPin className="w-6 h-6 text-blue-500" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Location</h4>
-                      <p className="text-gray-600">123 Innovation Drive<br />San Francisco, CA 94105</p>
-                    </div>
-                  </div>
+                              
                   <div className="flex items-start gap-4">
                     <div className="p-3 bg-blue-50 rounded-lg">
                       <Clock className="w-6 h-6 text-blue-500" />
