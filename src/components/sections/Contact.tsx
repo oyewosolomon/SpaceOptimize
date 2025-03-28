@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="bg-white py-24">
+    <div className="bg-white py-24" id='contact'>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">

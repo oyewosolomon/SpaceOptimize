@@ -165,7 +165,7 @@ const Navbar: React.FC = () => {
             </a>
            
             <a 
-              href="#" 
+              href="#contact" 
               className={`px-4 py-2 rounded-lg transition-colors ${
                 isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
               }`}
